@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Use printf to print a string followed by a new line
+ * main - Use printf to print the size of various types
  *
  * Return: Always 0 (Success)
  */
