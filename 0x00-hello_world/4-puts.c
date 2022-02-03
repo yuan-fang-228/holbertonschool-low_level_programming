@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /* use puts to print out a string*/
 int main(void)
 {
