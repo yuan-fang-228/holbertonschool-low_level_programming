@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - print all single digit;
+ * main - print all single digit using putchar;
  *
  * Return: Always 0 (Success)
  */
