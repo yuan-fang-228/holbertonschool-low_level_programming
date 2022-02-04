@@ -31,8 +31,8 @@ int main(void)
 						putchar(',');
 						putchar(' ');
 					}
-					d = '0';
 				}
+				d = '0';
 			}
 		}
 	}
