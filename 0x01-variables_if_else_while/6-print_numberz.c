@@ -8,12 +8,13 @@
  */
 int main(void)
 {
-	int n;
+	int n = '0';
 
-	for (n = 0; n < 10; n++)
+	while (n <= '9')
 	{
-		putchar("%d", n);
+		putchar(n);
+		n++;
 	}
-	putchar("\n");
+	putchar('\n');
 	return (0);
 }
