@@ -17,9 +17,17 @@ int main(void)
 	{
 		for (b = '0'; b <= '9'; b++)
 		{
-			for (c = '0'; c <= '9'; c++)
+			for (c = a; c <= '9'; c++)
 			{
-				for (d = b + 1; d <= '9'; d++)
+				if (c == a)
+				{
+					d = b + 1;
+				}
+				else
+				{
+					d = '0';
+				}
+				while (d <= '9')
 				{
 					putchar(a);
 					putchar(b);
@@ -31,6 +39,7 @@ int main(void)
 						putchar(',');
 						putchar(' ');
 					}
+					d++;
 				}
 				d = '0';
 			}
