@@ -31,10 +31,13 @@ void jack_bauer(void);
 /* print the 9 time table*/
 void times_table(void);
 
-/*add two integers*/
+/* add two integers */
 int add(int i, int j);
 
-/*print all natural numbers from n to 98*/
+/* print all natural numbers from n to 98 */
 void print_to_98(int n);
+
+/* prints the n times table, starting with 0 */
+void print_times_table(int n);
 
 #endif
