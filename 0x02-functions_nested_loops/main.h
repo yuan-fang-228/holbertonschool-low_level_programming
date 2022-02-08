@@ -31,4 +31,7 @@ void jack_bauer(void);
 /* print the 9 time table*/
 void times_table(void);
 
+/*add two integers*/
+int add(int i, int j);
+
 #endif
