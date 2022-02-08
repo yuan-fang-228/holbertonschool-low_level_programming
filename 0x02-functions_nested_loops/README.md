@@ -12,4 +12,5 @@
 9. 9-times_table.c - prints the 9 times table
 10. 10-add.c - adds two integers and returns the result
 11. 11-print_to_98.c - prints all natural numbers from n to 98
-12. 100-times_table.c - prints the n times table,
+12. 100-times_table.c - prints the n times table
+13. 101-natural.c - prints the sum of all the multiples of 3 or 5 below 1024
