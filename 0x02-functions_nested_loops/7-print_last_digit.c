@@ -7,16 +7,16 @@
  *
  * Return: return the value of the last digit
  */
-int print_last_digit(int r)
+int print_last_digit(int i)
 {
-	if (r >= 0)
+	if (i >= 0)
 	{
-		_putchar((r % 10) + '0');
-		return (r % 10);
+		_putchar((i % 10) + '0');
+		return (i % 10);
 	}
 	else
 	{
-		_putchar((abs(r) % 10) + '0');
-		return ((abs(r) % 10));
+		_putchar(abs(i % 10) + '0');
+		return (abs(i % 10));
 	}
 }
