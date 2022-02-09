@@ -7,10 +7,10 @@
  */
 int main(void)
 {
-	int f1 = 0, f2 = 1, i, next;
+	int f1 = 1, f2 = 2, i, next;
 
     printf("%d ", f1);
-    for (i = 1; i < 50; i++) {
+    for (i = 0; i < 50; i++) {
         printf("%d ", f2);
         next = (f1 + f2);
         f1 = f2;
