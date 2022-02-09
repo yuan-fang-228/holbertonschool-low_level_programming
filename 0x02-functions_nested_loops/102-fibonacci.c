@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	int f1 = 1, f2 = 2, i, next;
+	long f1 = 1, f2 = 2, i, next;
 
     printf("%d, ", f1);
     for (i = 0; i < 50; i++) {
