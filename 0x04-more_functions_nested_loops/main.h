@@ -31,4 +31,7 @@ void print_diagonal(int n);
 /* print a square, followed by a new line.*/
 void print_square(int size);
 
+/* prints a triangle, followed by a new line.*/
+void print_triangle(int size);
+
 #endif
