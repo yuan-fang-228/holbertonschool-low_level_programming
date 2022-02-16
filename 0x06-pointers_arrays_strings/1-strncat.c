@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
   * _strlen - returns th length of a string
@@ -51,7 +52,7 @@ char *_strncat(char *dest, char *src, int n)
 
 	if (_strlen(src) <= n)
 	{
-		_strcat(dest, src);
+		return (_strcat(dest, src));
 	}
 	while (i < n)
 	{
