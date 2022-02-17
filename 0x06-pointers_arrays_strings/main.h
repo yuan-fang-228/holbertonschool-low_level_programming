@@ -19,4 +19,10 @@ void reverse_array(int *a, int n);
 /* change all lowercase letters of a string to uppercase */
 char *string_toupper(char *l);
 
+/* capitalizes all words of a string */
+char *cap_string(char *str);
+
+/* encodes a string into 1337 */
+char *leet(char *str);
+
 #endif
