@@ -25,4 +25,7 @@ char *cap_string(char *str);
 /* encodes a string into 1337 */
 char *leet(char *str);
 
+/* encodes a string using rot13 */
+char *rot13(char *str);
+
 #endif

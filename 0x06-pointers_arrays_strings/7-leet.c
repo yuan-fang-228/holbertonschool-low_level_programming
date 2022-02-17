@@ -20,6 +20,7 @@ char *leet(char *str)
 			if (str[indexStr] == letters[indexLt])
 			{
 				str[indexStr] = numbers[indexLt];
+				break;
 			}
 			indexLt++;
 		}
