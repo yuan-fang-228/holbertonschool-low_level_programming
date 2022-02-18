@@ -28,7 +28,7 @@ int _power(int p, int b)
 	int i;
 	int result = 1;
 
-	for (i = 0; i < p; ++i)
+	for (i = 1; i <= p; i++)
 	{
 		result = result * b;
 	}
@@ -66,7 +66,7 @@ void print_number(int n)
 {
 	if (n == 0)
 	{
-		_putchar('0');
+		_putchar(n + '0');
 	}
 	else if (n > 0)
 	{
