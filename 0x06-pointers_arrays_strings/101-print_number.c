@@ -44,15 +44,16 @@ int _power(int p, int b)
 void print_positive_number(int pn)
 {
 	int length = number_length(pn);
-	int i;
+	int i = length - 1;
 	int number = pn;
 	int divider;
 
-	for (i = length - 1; i >= 0; i--)
+	while (i >= 0)
 	{
 		divider = _power(i, 10);
 		_putchar(number / divider + '0');
 		number = number % divider;
+		i--;
 	}
 }
 
