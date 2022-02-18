@@ -51,7 +51,7 @@ void print_positive_number(int pn)
 	{
 		divider = _power(10, i);
 		print_number = (pn / divider);
-		
+
 		if (print_number < 0)
 		{
 			print_number = (print_number * -1);
