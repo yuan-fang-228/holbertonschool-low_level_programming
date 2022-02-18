@@ -45,19 +45,18 @@ void print_positive_number(int pn)
 {
 	int i = number_length(pn) - 1;
 	int divider;
-	int print_number;
+	int print_digits;
 
 	while (i >= 0)
 	{
 		divider = _power(10, i);
-		print_number = (pn / divider);
+		print_digits = (pn / divider);
 
-		if (print_number < 0)
+		if (print_digits < 0)
 		{
-			print_number = (print_number * -1);
+			print_digits = (print_digits * -1);
 		}
-
-		_putchar(print_number + '0');
+		_putchar(print_digits + '0');
 		pn = pn % divider;
 		i--;
 	}
