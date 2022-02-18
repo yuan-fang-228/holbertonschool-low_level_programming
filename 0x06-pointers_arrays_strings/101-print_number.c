@@ -45,11 +45,19 @@ void print_positive_number(int pn)
 {
 	int i = number_length(pn) - 1;
 	int divider;
+	int print_number;
 
 	while (i >= 0)
 	{
 		divider = _power(10, i);
-		_putchar(pn / divider + '0');
+		print_number = (pn / divider);
+		
+		if (print_number < 0)
+		{
+			print_number = (print_number * -1);
+		}
+
+		_putchar(print_number + '0');
 		pn = pn % divider;
 		i--;
 	}
@@ -73,7 +81,7 @@ void print_number(int n)
 	else
 	{
 		_putchar('-');
-		print_positive_number(-n);
+		print_positive_number(n);
 	}
 }
 
