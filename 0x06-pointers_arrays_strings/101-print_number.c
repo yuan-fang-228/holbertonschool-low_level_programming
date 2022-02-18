@@ -23,7 +23,7 @@ int number_length(int num)
  * @b: base number
  * Return: return result
  */
-int _power(int p, int b)
+int _power(int b, int p)
 {
 	int i;
 	int result = 1;
@@ -43,16 +43,14 @@ int _power(int p, int b)
   */
 void print_positive_number(int pn)
 {
-	int length = number_length(pn);
-	int i = length - 1;
-	int number = pn;
+	int i = number_length(pn) - 1;
 	int divider;
 
 	while (i >= 0)
 	{
-		divider = _power(i, 10);
-		_putchar(number / divider + '0');
-		number = number % divider;
+		divider = _power(10, i);
+		_putchar(pn / divider + '0');
+		pn = pn % divider;
 		i--;
 	}
 }
@@ -66,7 +64,7 @@ void print_number(int n)
 {
 	if (n == 0)
 	{
-		_putchar(n + '0');
+		_putchar('0');
 	}
 	else if (n > 0)
 	{
