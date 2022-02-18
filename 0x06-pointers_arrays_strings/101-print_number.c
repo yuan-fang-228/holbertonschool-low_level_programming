@@ -28,7 +28,7 @@ int _power(int p, int b)
 	int i;
 	int result = 1;
 
-	for (i = 1; i <= p; i++)
+	for (i = 0; i < p; ++i)
 	{
 		result = result * b;
 	}
