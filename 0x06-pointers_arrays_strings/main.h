@@ -1,6 +1,9 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+/* print the characters */
+int _putchar(char c);
+
 /*  concatenates two strings */
 char *_strcat(char *dest, char *src);
 
@@ -27,5 +30,8 @@ char *leet(char *str);
 
 /* encodes a string using rot13 */
 char *rot13(char *str);
+
+/* use putchar to print an integer */
+void print_number(int n);
 
 #endif
