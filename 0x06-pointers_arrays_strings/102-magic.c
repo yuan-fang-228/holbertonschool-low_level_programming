@@ -1,9 +1,5 @@
 #include <stdio.h>
 
-/**
-  * main - test memory address
-  * Return: return null
-  */
 int main(void)
 {
 	int n;
