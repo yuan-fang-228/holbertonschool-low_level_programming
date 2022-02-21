@@ -9,6 +9,11 @@ int _strlen(char *s)
 {
 	int count = 0;
 
+	if (s == NULL)
+	{
+		return (0);
+	}
+
 	while (*(s + count) != '\0')
 	{
 		count++;
@@ -28,14 +33,11 @@ char *_strchr(char *s, char c)
 	int count;
 	int length = _strlen(s);
 
-	if (length > 0)
+	for (count = 0; count < length; count++)
 	{
-		for (count = 0; count < length; count++)
+		if (s[count] == c)
 		{
-			if (s[count] == c)
-			{
-				return (&s[count]);
-			}
+			return (&s[count]);
 		}
 	}
 	return (0);
