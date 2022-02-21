@@ -2,22 +2,6 @@
 #define NULL 0
 
 /**
-  * _strlen - returns th length of a string
-  * @s: string to check
-  * Return: return the length
-  */
-int _strlen(char *s)
-{
-	int count = 0;
-
-	while (*(s + count) != '\0')
-	{
-		count++;
-	}
-	return (count);
-}
-
-/**
   * _strchr - locate a character in a string
   * @s: pointer to a string
   * @c: character to be located in the string
@@ -25,15 +9,15 @@ int _strlen(char *s)
   */
 char *_strchr(char *s, char c)
 {
-	int count;
-	int length = _strlen(s);
+	int count = 0;
 
-	for (count = 0; count < length; count++)
+	while (s[count] != '\0')
 	{
 		if (s[count] == c)
 		{
 			return (&s[count]);
 		}
+		count++;
 	}
 	return (NULL);
 }
