@@ -22,10 +22,13 @@ unsigned int _strspn(char *s, char *accept)
 				count++;
 				break;
 			}
-			indexAccept++;
-			if (accept[indexAccept] == '\0')
+			else
 			{
-				return (count);
+				indexAccept++;
+				if (accept[indexAccept] == '\0')
+				{
+					return (count);
+				}
 			}
 		}
 		indexS++;
