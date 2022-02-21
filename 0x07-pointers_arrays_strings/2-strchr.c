@@ -17,7 +17,10 @@ char *_strchr(char *s, char c)
 		{
 			return (&s[count]);
 		}
-		count++;
+		else
+		{
+			count++;
+		}
 	}
 	return (NULL);
 }
