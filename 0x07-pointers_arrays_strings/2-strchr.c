@@ -28,12 +28,15 @@ char *_strchr(char *s, char c)
 	int count;
 	int length = _strlen(s);
 
-	for (count = 0; count < length; count++)
+	if (length > 0)
 	{
-		if (s[count] == c)
+		for (count = 0; count < length; count++)
 		{
-			return (&s[count]);
+			if (s[count] == c)
+			{
+				return (&s[count]);
+			}
 		}
 	}
-	return ('\0');
+	return (0);
 }
