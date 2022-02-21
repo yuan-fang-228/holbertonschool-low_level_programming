@@ -1,6 +1,9 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+/* print the characters */
+int _putchar(char c);
+
 /* fills memory with a constant byte */
 char *_memset(char *s, char b, unsigned int n);
 
@@ -15,5 +18,8 @@ unsigned int _strspn(char *s, char *accept);
 
 /* sesrch a string of any of a set of bytes */
 char *_strpbrk(char *s, char *accept);
+
+/* print the chess board */
+void print_chessboard(char (*a)[8]);
 
 #endif
