@@ -13,4 +13,7 @@ char *_strchr(char *s, char c);
 /* get the length of a prefix substring */
 unsigned int _strspn(char *s, char *accept);
 
+/* sesrch a string of any of a set of bytes */
+char *_strpbrk(char *s, char *accept);
+
 #endif
