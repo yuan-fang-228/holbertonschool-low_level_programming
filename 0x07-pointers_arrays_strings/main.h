@@ -28,4 +28,7 @@ void print_diagsums(int *a, int size);
 /* locate a substring */
 char *_strstr(char *haystack, char *needle);
 
+/* sets the value of a pointer to a char */
+void set_string(char **s, char *to);
+
 #endif
