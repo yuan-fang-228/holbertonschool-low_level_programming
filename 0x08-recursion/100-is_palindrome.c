@@ -30,15 +30,18 @@ int checkPalindrome(char *s, int start, int end)
 	{
 		return (1);
 	}
-	if (s[start] != s[end])
+	else if (s[start] != s[end])
 	{
 		return (0);
 	}
-	if (start < end)
+	else if (start < end)
 	{
 		return (checkPalindrome(s, start + 1, end - 1));
 	}
-	return (1);
+	else
+	{
+		return (1);
+	}
 }
 
 /**
