@@ -15,4 +15,8 @@ int _strlen_recursion(char *s);
 
 /* do the factorial of a given number */
 int factorial(int n);
+
+/* return the caculation of the power of integer */
+int _pow_recursion(int x, int y);
+
 #endif
