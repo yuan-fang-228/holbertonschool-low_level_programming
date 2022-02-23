@@ -19,4 +19,7 @@ int factorial(int n);
 /* return the caculation of the power of integer */
 int _pow_recursion(int x, int y);
 
+/* return the natural square root of a number*/
+int _sqrt_recursion(int n);
+
 #endif
