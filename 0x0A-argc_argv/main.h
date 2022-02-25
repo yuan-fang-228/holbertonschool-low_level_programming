@@ -5,6 +5,6 @@
 int _putchar(char c);
 
 /* check if it is digit */
-int isadigit(char *c)
+int isadigit(char *c);
 
 #endif
