@@ -4,4 +4,7 @@
 /* print the characters */
 int _putchar(char c);
 
+/* check if it is digit */
+int isadigit(char *c)
+
 #endif
