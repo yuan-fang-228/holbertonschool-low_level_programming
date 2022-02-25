@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 
 /**
   * isadigit - check if it is digit
@@ -12,7 +11,7 @@ int isadigit(char *c)
 {
 	while (*c != '\0')
 	{
-		if (isdigit(*c) == 1)
+		if (*c >= '0' && *c <= '9')
 			c++;
 		else
 			return (0);
