@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
 	if (argc == 1)
 	{
 		printf("0\n");
+		return (0);
 	}
 	else if (argc > 1)
 	{
@@ -48,4 +49,6 @@ int main(int argc, char *argv[])
 		}
 		printf("%d\n", sum);
 	}
+
+	return (0);
 }
