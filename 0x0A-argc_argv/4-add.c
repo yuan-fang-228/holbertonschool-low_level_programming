@@ -36,18 +36,16 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-	else if (argc > 1)
+	for (i = 1; i < argc; i++)
 	{
-		for (i = 1; i < argc; i++)
+		if (isadigit(argv[i]) == 0)
 		{
-			if (isadigit(argv[i]) == 0)
-			{
-				printf("Error\n");
-				return (1);
-			}
-			sum = sum + atoi(argv[i]);
+			printf("Error\n");
+			return (1);
 		}
-		printf("%d\n", sum);
+			sum = sum + atoi(argv[i]);
 	}
+	printf("%d\n", sum);
+	
 	return (0);
 }
