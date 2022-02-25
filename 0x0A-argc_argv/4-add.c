@@ -28,7 +28,7 @@ int isadigit(char *c)
   */
 int main(int argc, char *argv[])
 {
-	int i = 1;
+	int i;
 	int sum = 0;
 
 	if (argc == 1)
@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 			printf("Error\n");
 			return (1);
 		}
-			sum = sum + atoi(argv[i]);
+		sum = sum + atoi(argv[i]);
 	}
 	printf("%d\n", sum);
 
