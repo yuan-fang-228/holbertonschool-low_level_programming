@@ -46,14 +46,18 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
-	else if (s1 == NULL && s2 == NULL)
-	{
-		return (NULL);
-	}
+	// else if (s1 == NULL && s2 == NULL)
+	// {
+	// 	return (NULL);
+	// }
 	length1 = _strlen(s1);
 	length2 = _strlen(s2);
 	newStr = malloc((length1 + length2 + 1) * sizeof(char));
 	if (newStr == NULL)
+	{
+		return (NULL);
+	}
+	else if (length1 == 0 && length2 == 0)
 	{
 		return (NULL);
 	}
@@ -69,6 +73,5 @@ char *str_concat(char *s1, char *s2)
 		newStr[i + j] = s2[j];
 		j++;
 	}
-
 	return (newStr);
 }
