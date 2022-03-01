@@ -46,6 +46,10 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
+	else if (s1 == NULL && s2 == NULL)
+	{
+		return (NULL);
+	}
 	length1 = _strlen(s1);
 	length2 = _strlen(s2);
 	newStr = malloc((length1 + length2 + 1) * sizeof(char));
@@ -53,10 +57,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-	else if (length1 == 0 && length2 == 0)
-	{
-		return (NULL);
-	}
+	
 	i = 0;
 	while (s1[i] != '\0')
 	{
