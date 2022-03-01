@@ -42,9 +42,13 @@ char *str_concat(char *s1, char *s2)
 	{
 		s1 = "";
 	}
-	else if (s2 == NULL)
+	if (s2 == NULL)
 	{
 		s2 = "";
+	}
+	else if (s1 == NULL && s2 == NULL)
+	{
+		return (NULL);
 	}
 	length1 = _strlen(s1);
 	length2 = _strlen(s2);
