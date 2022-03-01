@@ -7,4 +7,6 @@ int _putchar(char c);
 /* creates an array of chars, initializes with a specific char */
 char *create_array(unsigned int size, char c);
 
+/* return a newly allocated memory with the given string */
+char *_strdup(char *str);
 #endif
