@@ -19,4 +19,7 @@ int **alloc_grid(int width, int height);
 /* frees a 2 dimensional grid */
 void free_grid(int **grid, int height);
 
+/* concatenates all the arguments of the command */
+char *argstostr(int ac, char **av);
+
 #endif
