@@ -11,15 +11,17 @@ int *array_range(int min, int max)
 {
 	int i = 0;
 	int *newArray;
+	int numbers = max - min + 1;
 
 	if (min > max)
 		return (NULL);
-	 newArray = malloc((max - min + 1) * sizeof(*newArray));
+	 newArray = malloc(numbers * sizeof(*newArray));
 	if (newArray == NULL)
 		return (NULL);
-	while (i < (max - min + 1))
+	while (i < numbers)
 	{
-		newArray[i] = i;
+		newArray[i] = min;
+		min++;
 		i++;
 	}
 
