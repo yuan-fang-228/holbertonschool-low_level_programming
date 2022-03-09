@@ -7,7 +7,7 @@
   * main - print the results of two integers that are input by user
   * @argc: the amount of input arguments
   * @argv: all the arguments as an array
-  * Return: return 1
+  * Return: return 0
   */
 int main(int argc, char *argv[])
 {
@@ -34,5 +34,5 @@ int main(int argc, char *argv[])
 	}
 	printf("%d\n", func(a, b));
 
-	return (1);
+	return (0);
 }
