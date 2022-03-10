@@ -1,6 +1,9 @@
 #ifndef VARIADIC_FUNCTION_H
 #define VARIADIC_FUNCTION_H
 
+/* print the characters */
+int _putchar(char c);
+
 /* a function that returns the sum of all its parameters */
 int sum_them_all(const unsigned int n, ...);
 
