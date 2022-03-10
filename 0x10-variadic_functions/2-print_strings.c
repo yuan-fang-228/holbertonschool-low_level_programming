@@ -24,13 +24,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
 			printf("(nil)");
 		}
-		else if (i == 0 || separator == NULL)
+		else
 		{
 			printf("%s", str);
 		}
-		else
+		if (separator != NULL && i != n - 1)
 		{
-			printf("%s%s", separator, str);
+			printf("%s", separator);
 		}
 	}
 	printf("\n");
