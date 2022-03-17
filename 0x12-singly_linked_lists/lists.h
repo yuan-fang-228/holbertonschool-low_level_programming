@@ -22,4 +22,6 @@ int _putchar(char c);
 /* print all the elements of a list_t list */
 size_t print_list(const list_t *h);
 
+/* get the number of elements in the linked list */
+size_t list_len(const list_t *h);
 #endif
