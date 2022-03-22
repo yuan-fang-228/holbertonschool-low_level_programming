@@ -2,6 +2,23 @@
 #include "lists.h"
 
 /**
+  * listint_len - return the number of elements in linked list
+  * @h: pointer to the linked list
+  * Return: number of elements
+  */
+size_t listint_len(const listint_t *h)
+{
+	int count = 0;
+
+	while (h != NULL)
+	{
+		count++;
+		h = h->next;
+	}
+	return (count);
+}
+
+/**
   * insert_nodeint_at_index - insert a new node at a given position
   * @head: pointer to the head pointer of the linked list
   * @idx: the index of the list where new node should be added in.
@@ -14,7 +31,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *tmp = NULL;
 	unsigned int i = 1;
 
-	if (head == NULL || *head == NULL)
+	if (head == NULL)
 		return (NULL);
 	if (*head == NULL && idx != 0)
 		return (NULL);
@@ -38,6 +55,11 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			return (NULL);
 		}
 		i++;
+	}
+	if (idx > listint_len(*head))
+	{
+		free(newNode);
+		return (NULL);
 	}
 	newNode->next = tmp->next;
 	tmp->next = newNode;
