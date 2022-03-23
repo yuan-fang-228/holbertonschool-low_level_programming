@@ -12,8 +12,6 @@ size_t print_listint_safe(const listint_t *head)
 	int count = 0;
 	long int add1, add2;
 
-	if (head == NULL)
-		return (0);
 	while (head != NULL)
 	{
 		add1 = (long int)head;
