@@ -20,7 +20,7 @@ size_t print_listint_safe(const listint_t *head)
 		add2 = (long int)head->next;
 		printf("[%p] %d\n", (void *)head, head->n);
 		count++;
-		if (add1 - add2 >= 0)
+		if (add1 - add2 > 0)
 		{
 			head = head->next;
 		}
