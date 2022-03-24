@@ -2,25 +2,6 @@
 #include "main.h"
 
 /**
- * _power - calculate the power of a number
- * @p: power number
- * @b: base number
- * Return: return result
- */
-int _power(int b, int p)
-{
-	int i;
-	int result = 1;
-
-	for (i = 1; i <= p; i++)
-	{
-		result = result * b;
-	}
-
-	return (result);
-}
-
-/**
   * _strlen - returns th length of a string
   * @s: string to check
   * Return: return the length
