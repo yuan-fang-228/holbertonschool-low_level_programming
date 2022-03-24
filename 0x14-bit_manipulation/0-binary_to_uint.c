@@ -59,7 +59,7 @@ unsigned int binary_to_uint(const char *b)
 		}
 		if (b[i] == '1')
 		{
-			decimal = decimal + _power(2, power);
+			decimal = decimal + (1 << power);
 		}
 		i++;
 		power--;
