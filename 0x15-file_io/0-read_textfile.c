@@ -34,7 +34,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	filecontent[letters] = '\0';
-	close(fd);
 	writebytes = write(STDOUT_FILENO, filecontent, readbytes);
 	if (writebytes < 0)
 	{
