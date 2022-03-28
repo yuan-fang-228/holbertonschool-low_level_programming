@@ -62,17 +62,19 @@ int main(int argc, char *argv[])
 			err_msg(99, argv[2]);
 		}
 	}
-	if(readbytes == -1)
+	if (readbytes == -1)
 	{
 		err_msg(98, argv[1]);
 		exit(98);
 	}
 	if (close(fd_from) < 0)
 	{
+		close(fd_to);
 		err_msg(100, argv[1]);
 	}
 	if (close(fd_to) != 0)
 	{
+		close(fd_from);
 		err_msg(100, argv[2]);
 	}
 
