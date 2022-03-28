@@ -14,7 +14,7 @@
  */
 void err_msg(int i, char *filename)
 {
-	if(i == 97)
+	if (i == 97)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
