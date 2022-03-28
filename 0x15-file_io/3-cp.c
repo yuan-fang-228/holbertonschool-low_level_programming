@@ -21,7 +21,7 @@ void err_msg(int i, char *filename)
 	}
 	if (i == 99)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", filename);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
 		exit(99);
 	}
 }
@@ -45,19 +45,19 @@ int main(int argc, char *argv[])
 	if (fd_from == -1)
 		err_msg(98, argv[1]);
 	fd_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	while ((readbytes = read(fd_from, buffer, 1024)) != 0)
+	while ((readbytes = read(fd_from, buffer, 1024)) > 0)
 	{
-		if (readbytes == -1)
-		{
-			close(fd_to);
-			err_msg(98, argv[1]);
-		}
 		writebytes = write(fd_to, buffer, readbytes);
 		if (fd_to == -1 || writebytes == -1)
 		{
 			close(fd_from);
 			err_msg(99, argv[2]);
 		}
+	}
+	if (readbytes == -1)
+	{
+		close(fd_to);
+		err_msg(98, argv[1]);
 	}
 	if (close(fd_from) < 0)
 	{
