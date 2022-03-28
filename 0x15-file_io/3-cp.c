@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 		writebytes = write(fd_to, buffer, readbytes);
 		if (fd_to == -1 || writebytes != readbytes)
 		{
-			close(fd_from)
+			close(fd_from);
 			err_msg(99, argv[2]);
 		}
 	}
