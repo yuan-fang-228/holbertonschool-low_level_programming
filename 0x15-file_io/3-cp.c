@@ -54,16 +54,16 @@ int main(int argc, char *argv[])
 	fd_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd_to == -1)
 		err_msg(99, argv[2]);
-	while ((readbytes = read(fd_from, buffer, 1024)) > 0)
+	while ((readbytes = read(fd_from, buffer, 1024)) != 0)
 	{
+		if (readbytes == -1)
+		{
+			close(fd_to);
+			err_msg(98, argv[1]);
+		}
 		writebytes = write(fd_to, buffer, readbytes);
 		if (writebytes == -1)
 			err_msg(99, argv[2]);
-	}
-	if (readbytes == -1)
-	{
-		close(fd_to);
-		err_msg(98, argv[1]);
 	}
 	if (close(fd_from) < 0)
 	{
