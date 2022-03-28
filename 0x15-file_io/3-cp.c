@@ -38,8 +38,7 @@ void err_msg(int i, char *filename)
  */
 int main(int argc, char *argv[])
 {
-	int fd_from, fd_to;
-	int readbytes, writebytes;
+	int fd_from, fd_to, readbytes, writebytes;
 	char buffer[1024];
 
 	if (argc != 3)
@@ -63,16 +62,13 @@ int main(int argc, char *argv[])
 		}
 	}
 	if (readbytes == -1)
-	{
 		err_msg(98, argv[1]);
-		exit(98);
-	}
 	if (close(fd_from) < 0)
 	{
 		close(fd_to);
 		err_msg(100, argv[1]);
 	}
-	if (close(fd_to) != 0)
+	if (close(fd_to) < 0)
 	{
 		close(fd_from);
 		err_msg(100, argv[2]);
