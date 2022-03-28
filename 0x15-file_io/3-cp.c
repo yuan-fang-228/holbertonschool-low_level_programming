@@ -55,24 +55,25 @@ int main(int argc, char *argv[])
 	while ((readbytes = read(fd_from, buffer, 1024)) > 0)
 	{
 		writebytes = write(fd_to, buffer, readbytes);
-		if (writebytes != readbytes)
+		if (writebytes == -1 || writebytes != readbytes)
 		{
 			close(fd_from);
 			err_msg(99, argv[2]);
 		}
 	}
 	if (readbytes == -1)
-		err_msg(98, argv[1]);
-	if (close(fd_from) < 0)
-	{
-		close(fd_to);
-		err_msg(100, argv[1]);
-	}
-	if (close(fd_to) < 0)
 	{
 		close(fd_from);
-		err_msg(100, argv[2]);
+		err_msg(98, argv[1]);
 	}
+	if (close(fd_from) < 0)
+		err_msg(100, argv[1]);
+	else
+		close(fd_from);
+	if (close(fd_to) < 0)
+		err_msg(100, argv[2]);
+	else
+		close(fd_to);
 
 	return (0);
 }
