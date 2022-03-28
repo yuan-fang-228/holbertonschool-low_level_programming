@@ -43,7 +43,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (text_content == NULL)
 		return (1);
 	length = _strlen(text_content);
-	writebytes = write(fd, text_content, length + 1);
+	writebytes = write(fd, text_content, length);
 	if (writebytes == -1)
 	{
 		close(fd);
