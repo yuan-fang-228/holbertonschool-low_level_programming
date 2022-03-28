@@ -14,11 +14,6 @@
  */
 void err_msg(int i, char *filename)
 {
-	if (i == 97)
-	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
-	}
 	if (i == 98)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
@@ -47,7 +42,10 @@ int main(int argc, char *argv[])
 	char buffer[1024];
 
 	if (argc != 3)
-		err_msg(97, "");
+	{
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
 	fd_from = open(argv[1], O_RDONLY);
 	if (fd_from == -1)
 		err_msg(98, argv[1]);
