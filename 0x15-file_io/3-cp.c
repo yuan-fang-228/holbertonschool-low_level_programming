@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 	while ((readbytes = read(fd_from, buffer, 1024)) > 0)
 	{
 		writebytes = write(fd_to, buffer, readbytes);
-		if (writebytes == -1 || writebytes != readbytes)
+		if (writebytes != readbytes)
 		{
 			close(fd_from);
 			err_msg(99, argv[2]);
