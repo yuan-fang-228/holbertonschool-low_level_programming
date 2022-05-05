@@ -6,7 +6,7 @@
   * @h: pointer to the linked list
   * Return: number of elements
   */
-size_t listint_len(const listint_t *h)
+size_t listint_len(const dlistint_t *h)
 {
 	int count = 0;
 
