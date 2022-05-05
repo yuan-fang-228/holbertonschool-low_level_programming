@@ -71,7 +71,8 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	}
 	nthnode = get_dnodeint_at_index(*head, index);
 	nthnode->prev->next = nthnode->next;
-	nthnode->next->prev = nthnode->prev;
+	if (nthnode->next != NULL)
+		nthnode->next->prev = nthnode->prev;
 	free(nthnode);
 
 	return (1);
