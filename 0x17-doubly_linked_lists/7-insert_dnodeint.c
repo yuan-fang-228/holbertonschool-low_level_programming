@@ -2,6 +2,23 @@
 #include "lists.h"
 
 /**
+  * listint_len - return the number of elements in linked list
+  * @h: pointer to the linked list
+  * Return: number of elements
+  */
+size_t listint_len(const listint_t *h)
+{
+	int count = 0;
+
+	while (h != NULL)
+	{
+		count++;
+		h = h->next;
+	}
+	return (count);
+}
+
+/**
  * get_dnodeint_at_index - return nth nod of a double linked list
  * @head: head pointer
  * @index: node index to be found
@@ -34,7 +51,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *newnode = NULL;
 	dlistint_t *nthnode = NULL;
-
+	size_t count;
+	
+	count = listint_len(*h);
 	if (h == NULL)
 		return (NULL);
 	if (*h == NULL && idx != 0)
@@ -49,6 +68,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			return (NULL);
 		return (newnode);
 	}
+	if (idx >= count)
+		return (NULL);
 	nthnode = get_dnodeint_at_index(*h, idx);
 	newnode->n = n;
 	if (nthnode->next == NULL)
