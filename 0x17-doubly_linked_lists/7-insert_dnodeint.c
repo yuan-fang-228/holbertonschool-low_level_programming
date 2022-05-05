@@ -52,7 +52,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *newnode = NULL;
 	dlistint_t *nthnode = NULL;
 	size_t count;
-	
+
 	count = listint_len(*h);
 	if (h == NULL)
 		return (NULL);
