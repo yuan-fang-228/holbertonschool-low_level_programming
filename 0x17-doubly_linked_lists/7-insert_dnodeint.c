@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include "lists.h"
 
 /**
@@ -72,6 +73,13 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (NULL);
 	nthnode = get_dnodeint_at_index(*h, idx);
 	newnode->n = n;
+	if (idx == count)
+	{
+		newnode = add_dnodeint_end(h, n);
+		if (newnode == NULL)
+			return (NULL);
+		return (newnode);
+	}
 	if (nthnode == NULL)
 		return (NULL);
 	newnode->prev = nthnode->prev;
