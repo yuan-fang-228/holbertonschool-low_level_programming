@@ -24,12 +24,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (strcmp((ht->array[index]->key), key) == 0)
 		{
 			free(ht->array[index]->value);
-			if (strdup(value) != NULL)
-			{
-				ht->array[index]->value = strdup(value);
-				return (1);
-			}
-			return (0);
+			ht->array[index]->value = strdup(value);
+			return (1);
 		}
 		ht->array[index] = ht->array[index]->next;
 	}
