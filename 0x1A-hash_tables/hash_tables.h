@@ -51,4 +51,7 @@ void hash_table_print(const hash_table_t *ht);
 /* delete a hash table */
 void hash_table_delete(hash_table_t *ht);
 
+/* delete a linked list in hash table */
+void delete_list(hash_node_t *head);
+
 #endif
