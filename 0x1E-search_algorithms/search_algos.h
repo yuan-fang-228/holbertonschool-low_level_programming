@@ -13,4 +13,7 @@ int binary_search(int *array, size_t size, int value);
 /* jump search algorithm */
 int jump_search(int *array, size_t size, int value);
 
+/* advanced binary algorithm */
+int advanced_binary(int *array, size_t size, int value);
+
 #endif
