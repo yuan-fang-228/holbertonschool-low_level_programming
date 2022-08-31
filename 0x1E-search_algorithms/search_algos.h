@@ -10,4 +10,7 @@ int linear_search(int *array, size_t size, int value);
 /* binary search algorithm */
 int binary_search(int *array, size_t size, int value);
 
+/* jump search algorithm */
+int jump_search(int *array, size_t size, int value);
+
 #endif
